@@ -1,21 +1,18 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : CharacterMovement
 {
-    [SerializeField] private float speed;
-    private Rigidbody rb;
+    protected Vector3 lookAtDirection;
 
-    private void Awake()
+    public Vector3 LookAtDirection {  get { return lookAtDirection; } }
+
+    protected override void Init()
     {
-        rb = GetComponent<Rigidbody>();
+        base.Init();
+        lookAtDirection = Vector3.forward;
     }
 
-    void Update()
-    {
-        Move();
-    }
-
-    void Move()
+    protected override void Move()
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
@@ -28,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         if(direction.magnitude > 0 )
         {
             transform.forward = direction;
+            lookAtDirection = direction;
         }
 
     }
