@@ -24,5 +24,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = direction*speed + new Vector3(0, rb.linearVelocity.y, 0);
 
         rb.linearVelocity = velocity;
+
+        if(direction.magnitude > 0 )
+        {
+            transform.forward = direction;
+        }
+
     }
 }
