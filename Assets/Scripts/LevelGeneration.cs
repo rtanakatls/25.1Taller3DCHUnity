@@ -17,6 +17,7 @@ public class LevelGeneration : MonoBehaviour
         {
             GameObject obj = Instantiate(currentPattern.obj[index]);
             obj.transform.position = Vector3.forward * i * 100;
+            obj.GetComponent<EnemyGenerator>().SetSeed(seed);
             index++;
             if(index>= currentPattern.obj.Count)
             {
