@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : CharacterMovement
 {
+    [SerializeField] private PlayerData playerData;
     protected Vector3 lookAtDirection;
 
     public Vector3 LookAtDirection {  get { return lookAtDirection; } }
@@ -9,6 +10,7 @@ public class PlayerMovement : CharacterMovement
     protected override void Init()
     {
         base.Init();
+        speed = playerData.Speed;
         lookAtDirection = Vector3.forward;
     }
 

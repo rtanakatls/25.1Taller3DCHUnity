@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
-    [SerializeField] private List<LevelPattern> patterns;
+    [SerializeField] private PatternSettings patternSettings;
+
     [SerializeField] private int seed;
     private LevelPattern currentPattern;
 
     private void Awake()
     {
+        
         seed = Random.Range(0, 10000);
-        currentPattern = patterns[seed % patterns.Count];
+        currentPattern = patternSettings.LevelPatterns[seed % patternSettings.LevelPatterns.Count];
 
         int index = 0;
         for (int i = 0; i <= 9; i++)

@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  playerData: {fileID: 11400000, guid: f880a8feb8209164caa626d1730620eb, type: 2}
 --- !u!114 &433087139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,16 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b044f11146d7b2045a1cbe4011c32754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patterns:
-  - obj:
-    - {fileID: 7068040797312601142, guid: 437a020017bf6864f8d038ad3f6c9a63, type: 3}
-    - {fileID: 1615661846616341360, guid: 8a8ff48c3cd8d3e408362e9190a85c6f, type: 3}
-  - obj:
-    - {fileID: 7068040797312601142, guid: 437a020017bf6864f8d038ad3f6c9a63, type: 3}
-    - {fileID: 7068040797312601142, guid: 437a020017bf6864f8d038ad3f6c9a63, type: 3}
-  - obj:
-    - {fileID: 1615661846616341360, guid: 8a8ff48c3cd8d3e408362e9190a85c6f, type: 3}
-    - {fileID: 1615661846616341360, guid: 8a8ff48c3cd8d3e408362e9190a85c6f, type: 3}
+  patternSettings: {fileID: 11400000, guid: 943b6938f5bf30346b96a4eab3d4e045, type: 2}
   seed: 3
 --- !u!4 &947566724
 Transform:
